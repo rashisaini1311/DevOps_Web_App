@@ -1,18 +1,23 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.casestudy</groupId>
-  <artifactId>Devops_CaseStudy_Web_app</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>war</packaging>
-  <name>Devops_CaseStudy_Web_app</name>
-  <url>http://maven.apache.org</url>
-   <properties>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.casestudy</groupId>
+    <artifactId>Devops_CaseStudy_Web_app</artifactId>
+    <version>1.0-RELEASE</version>
+    <packaging>war</packaging>
+    <name>Devops_CaseStudy_Web_app</name>
+    <url>http://maven.apache.org</url>
+
+    <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>${maven.compiler.source}</maven.compiler.target>
         <junit.jupiter.version>5.5.2</junit.jupiter.version>
         <junit.platform.version>1.5.2</junit.platform.version>
     </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -27,4 +32,25 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <distributionManagement>
+         <snapshotRepository>
+		    <id>artifactoryRepo</id>
+		    <url>http://54.255.227.254:8082/artifactory/libs-snapshot-local/</url>
+	</snapshotRepository>
+         <repository>
+                  <id>artifactory</id>
+                  <url>http://54.255.227.254:8082/artifactory/libs-release-local/</url>
+         </repository>
+   </distributionManagement>
+
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-deploy-plugin</artifactId>
+        </plugin>
+    </plugins>
+</build>
+
 </project>
