@@ -1,4 +1,4 @@
-FROM tomcat:jre8-alpine
+FROM shivani8406/mywebapp:v1.0
 
 COPY target/*.war webapps/
 
