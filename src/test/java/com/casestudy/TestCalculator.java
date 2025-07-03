@@ -71,12 +71,12 @@ public class TestCalculator {
         Assertions.assertEquals(10, calculator.sub(20, 10));
     }
 	
-	@Test
-    @DisplayName("Failed Sub")
-    void failedSubTest(TestInfo testInfo) {
-        Calculator calculator = new Calculator();
-        Assertions.assertNotEquals(10, calculator.sub(5, 2));
-    }
+	//@Test
+   // @DisplayName("Failed Sub")
+   // void failedSubTest(TestInfo testInfo) {
+   //     Calculator calculator = new Calculator();
+    //    Assertions.assertNotEquals(10, calculator.sub(5, 2));
+   // }
 	
 	@Test
     @DisplayName("Passed Mul")

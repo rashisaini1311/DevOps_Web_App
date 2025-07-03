@@ -1,4 +1,4 @@
-FROM kalithkarrahul/myapp:1.5
+FROM shivani8406/mywebapp:v1.0
 
 COPY target/*.war webapps/
 
