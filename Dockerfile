@@ -1,5 +1,4 @@
-FROM shivani8406/mywebapp:v1.0
-
+FROM rashisaini1311/tomcatwebapp:v1.0
 COPY target/*.war webapps/
 
-MAINTAINER "rahulkalithkar1996@gmail.com"
+MAINTAINER "imrinku1311@gmail.com"
